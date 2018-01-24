@@ -17,7 +17,12 @@ instance Show Tree where
 -- Feel free to write helper functions.
 
 swap :: Tree -> Tree
-swap = undefined
+-- swap = undefined
+swap (TInt i) = (TInt i)
+swap (TOp s t1 t2) = TOp s (swap t2) (swap t1)
 
 calc :: Tree -> Integer
-calc = undefined
+calc (TInt i) = i
+calc (TOp s t1 t2) | s == "*" = (*) (calc t1) (calc t2)
+                   | s == "-" = (-) (calc t1) (calc t2)
+                   | s == "+" = (+) (calc t1) (calc t2)
