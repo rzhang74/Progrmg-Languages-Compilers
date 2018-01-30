@@ -93,6 +93,12 @@ tests =
           (prop_union_eq_sortListUnion :: OrderedList Integer -> OrderedList Integer -> Property)
       ]
   , testGroup
+      "intersect Function"
+      [ testProperty
+          "Behaves like standard library intersect, up to ordering"
+          (prop_intersect_eq_sortListIntersect :: OrderedList Integer -> OrderedList Integer -> Property)
+      ] 
+  , testGroup
       "powerset Function"
       [ testProperty
           "Behaves like standard library subsequences, up to ordering"
