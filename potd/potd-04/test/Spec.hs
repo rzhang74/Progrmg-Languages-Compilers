@@ -10,20 +10,24 @@ main = defaultMain tests
 
 tests = [
         testGroup "Sum Digits Function" [
-                testProperty "Output is positive" (forAll randList sumDigitsReturnsPos)
+                testProperty "Output is non-negative" (forAll randList sumDigitsNonNeg)
+                -- Add your own tests here!
            ]
         , testGroup "Validate Function" [
-                testProperty "Output is of type bool" (forAll posInputs validateBoolean)
+                testProperty "Output is true when the sum % 10 == 0" (forAll posInputs validateMod)
+                -- Add your own tests here!
            ]
       ]
 
-randInputs = [ arbitrary `suchThat` (\x -> x >= 0 && x <= 20)]
-randList = listOf1 randInputs
-
 posInputs = choose (1, 10000)
 
-sumDigitsReturnsPos :: [Integer] -> Bool
-sumDigitsReturnsPos x = sumDigits > 0
+randDigit :: Gen Integer
+randDigit = choose (0,9)
 
-validateBoolean :: Integer -> Bool
-validateBoolean x = validate x == True | validate x == False
+randList = listOf randDigit
+
+sumDigitsNonNeg :: [Integer] -> Bool
+sumDigitsNonNeg x = sumDigits x >= 0
+
+validateMod :: Integer -> Bool
+validateMod x = x `mod` 10 == 0
