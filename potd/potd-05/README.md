@@ -24,8 +24,9 @@ split [6,3,9,2,5,7,1] == ([3,2,7],[6,9,5,1])
 ```
 
 Given two input lists, `merge` will combine these two lists by repeatedly
-taking the smallest of the initial elements of the two lists.  (If both lists
-happen to be sorted, the output will also be sorted.)
+taking the smallest of the initial elements of the two lists.  If the two
+initial elements are equal, you should take the initial element from the first
+list.  (If both lists happen to be sorted, the output will also be sorted.)
 
 ```
 merge [] [3,5,7] == [3,5,7]
