@@ -1,11 +1,7 @@
 MP2 - Interpreter
 =================
 
-Logistics
----------
-
 -   revision: 1.0
--   due: February 13, 2017
 
 Objectives
 ==========
