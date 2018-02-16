@@ -137,7 +137,8 @@ eval (LetExp pairs body) env = undefined
 -- -------------------
 
 exec :: Stmt -> PEnv -> Env -> Result
-exec (PrintStmt e) penv env = undefined
+exec (PrintStmt e) penv env = (val, penv, env) 
+    where val = show $ eval e env 
 
 --- ### Set Statements
 
