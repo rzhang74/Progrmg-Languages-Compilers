@@ -1,4 +1,4 @@
-POTD 7 --- Custom Infix Operators
+POTD 6 --- Custom Infix Operators
 ==============================
 
 Your work is to implement three custom infix operators, which are all related to set theory. Infix operators are really just normal functions, and we can implement them as such!
