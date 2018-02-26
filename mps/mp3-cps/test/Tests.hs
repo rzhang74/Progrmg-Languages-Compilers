@@ -7,7 +7,8 @@
 module Tests where
 
 import Data.List ((\\))
-import Main hiding (main)
+import Lib
+import Parse
 
 allTests :: [([Bool], String)]
 allTests = [ (tests_factk, "factk tests")
