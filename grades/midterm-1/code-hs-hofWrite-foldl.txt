@@ -1,0 +1,5 @@
+code-hs-hofWrite-foldl
+
+parameters order/number is wrong for the function.(-5points)
+
+Total score:5/10

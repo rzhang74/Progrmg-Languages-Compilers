@@ -1,0 +1,6 @@
+code-hs-recursionList-listsubtractn
+
+Good!
+You forgot the n parameter in the function definition of the recursive case.
+
+Total score:10/10

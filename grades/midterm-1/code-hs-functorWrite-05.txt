@@ -1,0 +1,5 @@
+code-hs-functorWrite-05
+
+Incorrect.(-10points)
+
+Total score:0/10
