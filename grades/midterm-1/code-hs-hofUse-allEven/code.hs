@@ -1,0 +1,1 @@
+allEven l = all even l
