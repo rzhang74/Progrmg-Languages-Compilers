@@ -1,6 +1,6 @@
 Grade report for Ruilin Zhang
 Programming Languages (cs421) 2018-01
-Report generated 2018-03-26 21:02:10
+Report generated 2018-04-23 21:52:49
 
 
                       Assignment  Status Points / Max  Norm Weight% Points
