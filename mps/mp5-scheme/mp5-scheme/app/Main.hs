@@ -32,7 +32,11 @@ repl env = do
         --
         -- The following line may be removed when you're done implementing
         --  the cases above:
-        _ -> print "Error in Main.hs: Finish implementing repl"
+        Left err -> print err
+        Right (Void, nenv) -> repl nenv
+        Right (val, nenv) -> do print val
+                                repl nenv
+        -- _ -> print "Error in Main.hs: Finish implementing repl"
   repl env                                            -- Loop with old env
 
 main :: IO ()

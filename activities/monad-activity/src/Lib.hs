@@ -14,5 +14,6 @@ instance Applicative Counter where
     (Counter f i) <*> (Counter x j) = Counter (f x) (i + j)
 
 instance Monad Counter where
-    return x = Counter x 0
-    Counter a i >>= f = undefined  --- YOUR CODE HERE
+    return x = Counter x 0
+    Counter a i >>= f = let (Counter x y) = f a
+                         in (Counter x (i + y + 1))

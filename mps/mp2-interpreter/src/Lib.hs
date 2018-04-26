@@ -187,7 +187,7 @@ exec (IfStmt e s1 s2) penv env =
 
 exec p@(ProcedureStmt name args body) penv env = ("", H.insert name p penv, env)
 
-exec (CallStmt name args) penv env = do
+exec (CallStmt name args) penv env = 
   case H.lookup name penv of
     Nothing -> ("Procedure " ++ name ++ " undefined", penv,env)
     Just (ProcedureStmt _ params body) ->
